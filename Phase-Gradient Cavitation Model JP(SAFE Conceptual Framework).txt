@@ -1,0 +1,128 @@
+【OSF用・SAFE公開ドラフト】
+Phase-Gradient Cavitation Model（概念フレームワーク／数式なし）
+タイトル（JP）
+
+位相勾配キャビテーション・モデル（SAFE概念版）
+
+タイトル（EN）
+
+Phase-Gradient Cavitation Model (SAFE Conceptual Framework)
+
+要旨 / Abstract
+
+JP
+本稿は、気泡半径の時間変化に関わる現象を、実装可能な数式を一切用いずに、4要素の相互作用として概念的に記述する。4要素とは、(A) 慣性応答、(B) 勾配の薄化、(C) 外圧差（潜在差）、(D) 非線形回復（反発）である。これらは定性的な関係のみを示し、具体的な方程式・パラメータ・初期条件・数値積分手順は提供しない。結果として、**崩壊（collapse）— 反発（rebound）— 終端停止（arrest）**の質的遷移を、研究者・技術者が安全に議論できる参照枠として提示する。
+
+EN
+This note presents a conceptual description of bubble-dynamics phenomena using four interacting factors—(A) inertial response, (B) gradient thinning, (C) external pressure difference (latent gap), and (D) nonlinear recovery (rebound)—without any implementable equations. Only qualitative relations are stated; no ODEs/PDEs, parameters, initial/boundary conditions, or numerical schemes are given. The framework explains the qualitative progression collapse → rebound → arrest as a safe reference for discussion.
+
+1. モデルの目的 / Purpose
+
+安全性重視：実装・再現を可能にする情報（パラメータ、数値解法）は一切含めない。
+
+概念の共有：現象理解の共通語彙と質的メカニズムだけを提供する。
+
+範囲限定：工学設計・出力最適化・衝撃波制御等の応用議論は本稿のスコープ外。
+
+2. 構成要素（定性的説明） / Components (Qualitative)
+
+A. 慣性応答（Inertial Response）
+
+半径が大きいほど、状態変化へ鈍く反応しやすい傾向（“重い”挙動）。
+
+半径が小さい領域では、軽く応答しやすい傾向。
+
+これは「変化そのものに対する体感的“重さ/軽さ”」を表す指標であり、式や係数は示さない。
+
+B. 勾配の薄化（Gradient Thinning）
+
+変化が急なとき（“傾き”が大きいとき）、内部・外部の不均一が相対的に薄まる方向に働く調整効果。
+
+急峻な挙動が続くと、系は落ち着く方向へ引かれやすい。
+
+具体的な速度・摩擦・粘性式は与えない。
+
+C. 外圧差／潜在差（External Pressure Difference / Latent Gap）
+
+外部環境と内部状態の差が、収縮/膨張の方向性を与える。
+
+半径が縮むと内部状態は相対的に押し返す力を持ちやすく、広がるとその逆の傾向。
+
+圧力や比熱比などの物理パラメータは名指し・数値ともに扱わない。
+
+D. 非線形回復（反発）（Nonlinear Recovery / Rebound）
+
+極端に小さい/大きい領域で、増えすぎ/減りすぎを抑える飽和的な戻しが働く。
+
+規模がある程度を超えると“それ以上は効きにくい”ような上限的性質をもつ。
+
+具体的なゲイン関数の形や閾値は示さない。
+
+3. 質的ダイナミクス / Qualitative Dynamics
+
+(i) 進行方向の決定
+
+系は 外圧差（C） の向きに引かれる（縮めたい/広げたい）。
+
+その動きは 慣性（A） により鈍化/加速が緩和される。
+
+(ii) 変化の落ち着き
+
+変化が急になるほど 勾配の薄化（B） が働き、過度の変化を和らげる。
+
+極端域では 非線形回復（D） が働き、中心域へ戻す傾向を作る。
+
+(iii) 位相的な推移（典型パターン）
+
+Collapse：差が優勢で一気に圧縮側に進むが、近傍では回復（D）が作用して行き過ぎを抑制。
+
+Rebound：回復の反動で一時的な跳ね返りが生じるが、勾配の薄化（B）が揺れを減衰。
+
+Arrest：差（C）が小さく、変化が緩やかになり、停止的な状態に近づく。
+
+これらは順序や強さが環境で入れ替わる質的傾向であり、数理的な解軌道や安定判別は提供しない。
+
+4. 言葉による“安全な相関”の例 / Safe Verbal Correlations
+
+外圧差が大きいほど、初動はその方向へ強まりやすい。
+
+変化が急になるほど、勾配の薄化が抑制的に働く。
+
+極端域では、回復が飽和的に強まる（ただし上限がある）。
+
+半径が大きいほど、挙動は重くなりがちで、小さいほど敏感になりがち。
+
+いずれも感覚的な方向性のみ。数値比例・指数・べき関係・微分記号は記述しない。
+
+5. スコープと非スコープ / Scope & Non-Scope
+
+含む：概念・語彙・質的因果。
+
+含まない：方程式・パラメータ・初期/境界条件・解法・数値例・コード・安全でない応用設計。
+
+応用議論（衝撃波制御・高出力化・設計最適化）は意図的に扱わない。
+
+6. 倫理・安全に関する注意 / Ethics & Safety
+
+本稿は実装不能を要件とし、研究安全のために具体式を削除している。
+
+読者が再実装可能と判断できる要素（式の形・パラメータ・アルゴリズム）は、本稿からは意図的に欠落している。
+
+引用・紹介時も、数値再現に繋がる補完は行わないでください。
+
+7. 関連位置づけ（任意の参考文献表記のみ） / Context (No Equations)
+
+本概念フレームは、collapse → rebound → arrest を言語的に整理する参照枠である。
+
+既存理論との正確な数理比較は別作業（査読論文等）に委ねる。
+
+8. 引用
+
+Rayleigh (1917)
+
+Plesset & Prosperetti (1977)
+
+Keller & Miksis (1980)
+
+Brennen (1995) “Cavitation and Bubble Dynamics”
+
